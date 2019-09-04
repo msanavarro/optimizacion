@@ -10,4 +10,4 @@ def gradiente(f, x):
 def hessiana(f, x):
     return(f, x)
 
-print(gradiente('f', 2))
+print(gradiente('f', 32))

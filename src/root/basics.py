@@ -1,21 +1,13 @@
 '''
-Created on 31 ago. 2019
+Created on 2 sep 2019
 
 @author: msanavarro
-
-calculo de gradiente, hessiana, ...
 '''
 
-x = 25
-print(x)
-
-for  i in range(100,110):
-    print(i)
-
 def gradiente(f, x):
-    return x
+    return(f, x)
 
 def hessiana(f, x):
-    return(x)
+    return(f, x)
 
-print(gradiente('a', x))
+print(gradiente('f', 2))

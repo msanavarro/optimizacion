@@ -10,36 +10,35 @@ b=((X'X)^-1)X'y
 '''
 
 import numpy as np
-import numpy.linalg as npl
 
 def mC(X, y):
     """
-    Devuelve el estimador de minimos cuadrados de b para y = Xb
+    Devuelve el estimador de mínimos cuadrados de b para y = Xb
 
     Si la matriz X es de rango completo, devuelve el estimador de mínimos 
     cuadrados de b para el problema y = Xb, que es b=((X'X)^-1)X'y. En caso 
-    contrario regresa 
+    contrario regresa None
     
-    Requiere numpy y numpy.linalg
+    Requiere numpy
 
     Parametros
     ----------
     X : numpy.array
-        Matriz de tamano [m, k] de rango k
+        Matriz de tamaño [m, k] de rango k
     y : numpy.array
-        Vector de tamano m
+        Vector de tamaño m
 
     Returns
     -------
     numpy.array
-        Estimador de minimos cuadrados de b (vector de tamano k)
+        Estimador de mínimos cuadrados de b (vector de tamaño k)
 
     """
     if(type(X)==np.ndarray and type(y)==np.ndarray):
         if(np.size(X,0)==np.size(y,0)):
-            if(npl.matrix_rank(X) == np.size(X, 1)):
+            if(np.linalg.matrix_rank(X) == np.size(X, 1)):
                 try:
-                    b = np.matmul(npl.inv(np.matmul(np.transpose(X), X)), np.matmul(np.transpose(X), y))
+                    b = np.matmul(np.linalg.inv(np.matmul(np.transpose(X), X)), np.matmul(np.transpose(X), y))
                     return b
                 except:
                     print("Ocurrio un error al calcular b")

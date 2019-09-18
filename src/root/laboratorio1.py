@@ -5,7 +5,7 @@ Created on 8 sep. 2019
 '''
 
 '''
-El estimador de mínimos cuadrados de b para el problema y=Xb es
+El estimador de mÃ­nimos cuadrados de b para el problema y=Xb es
 b=((X'X)^-1)X'y
 '''
 
@@ -13,9 +13,9 @@ import numpy as np
 
 def mC(X, y):
     """
-    Devuelve el estimador de mínimos cuadrados de b para y = Xb
+    Devuelve el estimador de mÃ­nimos cuadrados de b para y = Xb
 
-    Si la matriz X es de rango completo, devuelve el estimador de mínimos 
+    Si la matriz X es de rango completo, devuelve el estimador de mÃ­nimos 
     cuadrados de b para el problema y = Xb, que es b=((X'X)^-1)X'y. En caso 
     contrario regresa None
     
@@ -24,14 +24,14 @@ def mC(X, y):
     Parametros
     ----------
     X : numpy.array
-        Matriz de tamaño [m, k] de rango k
+        Matriz de tamaÃ±o [m, k] de rango k
     y : numpy.array
-        Vector de tamaño m
+        Vector de tamaÃ±o m
 
     Returns
     -------
     numpy.array
-        Estimador de mínimos cuadrados de b (vector de tamaño k)
+        Estimador de mÃ­nimos cuadrados de b (vector de tamaÃ±o k)
 
     """
     if(type(X)==np.ndarray and type(y)==np.ndarray):

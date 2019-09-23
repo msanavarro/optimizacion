@@ -4,10 +4,16 @@ Created on 2 sep 2019
 @author: msanavarro
 '''
 
-def gradiente(f, x):
-    return(f, x)
+import configparser
+
+def gradiente(f, x, h = ):
+    
+    return
 
 def hessiana(f, x):
-    return(f, x)
+    return
 
-print(gradiente('f', 32))
+def metodoNewton(x):
+    return x
+
+print(metodoNewton(10))

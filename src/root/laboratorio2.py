@@ -4,7 +4,8 @@ Created on 10 sep. 2019
 @author: msanavarro
 '''
 
-def gradiente(f, x):
+def gradiente(f, x, h = ):
+    
     return
 
 def hessiana(f, x):

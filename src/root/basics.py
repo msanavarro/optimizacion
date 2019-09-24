@@ -42,33 +42,8 @@ def gradiente(f, x, h=configFileReader.h_derivada):
 def hessiana(f, x):
     return
 
-def metodo_gradiente(f, y, eta, eps):
-    """
-    Devuelve una aproximacion min(f) usando el metodo del gradiente
-    
-    Requiere numpy
-
-    Parametros
-    ----------
-    f : function (se verifica que lo sea con callable(f))
-        Funcion que transforma un vector de tamano m en uno de tamano n
-    y : numpy.array
-        Vector de tamaño m
-
-    Resultado
-    -------
-    numpy.array
-        Aproximacion del valor que minimiza f, es un vector de tamano m
-
-    """
-    return x
 
 def metodoNewton(x):
     return x
 
-x = np.array([1, 2, 3])
 
-def funcion(x):
-    return 2*x
-
-print(gradiente(funcion, x))

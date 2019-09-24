@@ -60,3 +60,5 @@ X = np.array([[0.0,1.0],[2.0,3.0],[4.0,5.0]])
 y = np.array([0.1,0.9,2.4])
 
 print(mC(X, y))
+print(type(mC))
+print(type(y))

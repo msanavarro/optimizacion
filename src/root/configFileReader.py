@@ -9,4 +9,4 @@ import configparser
 config = configparser.ConfigParser()
 config.read('../../config/optimizacion.ini')
 
-print(float(config['DEFAULT']['h_derivada'])*2)
+h_derivada = float(config['DEFAULT']['h_derivada'])

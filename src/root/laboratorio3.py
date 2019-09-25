@@ -17,6 +17,7 @@ def hard_svm(X, y):
     
     
     
+    
     return w, b
 
 def datos(N):

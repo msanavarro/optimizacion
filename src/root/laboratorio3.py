@@ -5,6 +5,8 @@ Created on 24 sep. 2019
 '''
 
 import numpy as np
+import cvxopt
+from matplotlib import pyplot
 
 def hard_svm(X, y):
     '''
@@ -12,10 +14,11 @@ def hard_svm(X, y):
     X,y matrices de numpy
     (w,b):  Hiperplano [w.shape=(p,), b.shape=(1,)]
     '''
+    for yi in y:
+        print(yi)
+    
     w = 1
     b = 1
-    
-    
     
     
     return w, b
@@ -29,3 +32,11 @@ def datos(N):
     X = np.concatenate((X1, X2), axis=0)
     y = np.concatenate((np.ones(n), -1*np.ones(n)), axis=0)
     return X, y.squeeze()
+
+
+X, y = datos(200)
+
+pyplot.scatter(X[:,0], X[:,1])
+pyplot.show()
+print(hard_svm(X, y))
+

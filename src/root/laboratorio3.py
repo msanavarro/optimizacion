@@ -5,7 +5,7 @@ Created on 24 sep. 2019
 '''
 
 import numpy as np
-import cvxopt
+from cvxopt import solvers, matrix
 from matplotlib import pyplot
 
 def hard_svm(X, y):
@@ -14,13 +14,20 @@ def hard_svm(X, y):
     X,y matrices de numpy
     (w,b):  Hiperplano [w.shape=(p,), b.shape=(1,)]
     '''
-    for yi in y:
-        print(yi)
-    
-    w = 1
-    b = 1
-    
-    
+    P = matrix(np.concatenate((np.concatenate((np.identity(X.shape[1], float), np.zeros((X.shape[1],1),float)), axis=1),
+                              np.zeros((1,(X.shape[1]+1)),float)), axis=0), tc='d')
+    q = matrix(np.concatenate((np.zeros((X.shape[1],1),float), np.ones((1,1),float)), axis=0), tc='d')
+    y.shape=(X.shape[0],1)
+    X = np.concatenate((X, np.ones((X.shape[0],1))), axis=1)
+    G = -y * X
+    G = matrix(G, tc='d')
+    h=matrix(-np.ones(X.shape[0]), tc='d')
+        
+    sol = solvers.qp(P,q,G,h)
+    print(sol['x'])
+    w = np.array(sol['x'])
+    w, b = w[0:-1,:], w[-1,:]
+
     return w, b
 
 def datos(N):
@@ -36,7 +43,10 @@ def datos(N):
 
 X, y = datos(200)
 
+(w,b) = hard_svm(X, y)
+print(w, b)
 pyplot.scatter(X[:,0], X[:,1])
+pyplot.plot([np.min(X[:,0]),np.max(X[:,0])],[(-b-w[0]*np.min(X[:,0]))/w[1],(-b-w[0]*np.max(X[:,0]))/w[1]],c='g')
 pyplot.show()
-print(hard_svm(X, y))
+
 

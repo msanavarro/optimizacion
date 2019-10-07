@@ -16,7 +16,7 @@ def hard_svm(X, y):
     '''
     P = matrix(np.concatenate((np.concatenate((np.identity(X.shape[1], float), np.zeros((X.shape[1],1),float)), axis=1),
                               np.zeros((1,(X.shape[1]+1)),float)), axis=0), tc='d')
-    q = matrix(np.concatenate((np.zeros((X.shape[1],1),float), np.ones((1,1),float)), axis=0), tc='d')
+    q = matrix(np.zeros((X.shape[1]+1,1),float), tc='d')
     y.shape=(X.shape[0],1)
     X = np.concatenate((X, np.ones((X.shape[0],1))), axis=1)
     G = -y * X

@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{mystyle}
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\title{Optimizació Numérica}
+\author{Manuel Sarmiento Navarro}
+\maketitle
+
+\section{Introducción}
+\SweaveInput{tex/intro.Rnw}
+
+% \section{Laboratorio 1}
+% \SweaveInput{tex/lab1.Rnw}
+% 
+% \section{Laboratorio 2}
+% \SweaveInput{tex/lab2.Rnw}
+
+\section{Laboratorio 3}
+\SweaveInput{tex/lab3.Rnw}
+
+% \section{Laboratorio 4}
+% \SweaveInput{tex/lab4.Rnw}
+
+\end{document}

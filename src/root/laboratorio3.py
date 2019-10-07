@@ -9,19 +9,34 @@ from cvxopt import solvers, matrix
 from matplotlib import pyplot
 
 def hard_svm(X, y):
-    '''
-    (X,y): Datos de entrenamiento [X.shape=(m,p), y.shape=(m,)]
-    X,y matrices de numpy
-    (w,b):  Hiperplano [w.shape=(p,), b.shape=(1,)]
-    '''
-    P = matrix(np.concatenate((np.concatenate((np.identity(X.shape[1], float), np.zeros((X.shape[1],1),float)), axis=1),
-                              np.zeros((1,(X.shape[1]+1)),float)), axis=0), tc='d')
+    """
+    Devuelve los parámetros (w, b) del hiperplano que separa a los puntos con etiqueta
+    1 de aquellos con etiqueta -1
+    
+    Requiere 
+    ----------
+    numpy, cvxopt
+
+    Parametros
+    ----------
+    X : numpy.array
+        Matriz de tamaño [m, k]
+    y : numpy.array
+        Vector de tamaño m con etiquetas 1, -1
+
+    Returns
+    -------
+    numpy.array
+        Parámetros (w, b) del hiperplano w'x + b = 0
+
+    """
+    P = matrix(np.concatenate((np.concatenate((np.identity(X.shape[1], float), np.zeros((X.shape[1],1),float)), axis=1), np.zeros((1,(X.shape[1]+1)),float)), axis=0), tc='d')
     q = matrix(np.zeros((X.shape[1]+1,1),float), tc='d')
-    y.shape=(X.shape[0],1)
+    y.shape = (X.shape[0],1)
     X = np.concatenate((X, np.ones((X.shape[0],1))), axis=1)
     G = -y * X
     G = matrix(G, tc='d')
-    h=matrix(-np.ones(X.shape[0]), tc='d')
+    h = matrix(-np.ones(X.shape[0]), tc='d')
         
     sol = solvers.qp(P,q,G,h)
     print(sol['x'])

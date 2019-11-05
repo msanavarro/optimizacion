@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{isat}
+\ProvidesClass{itam}
 
 \LoadClass[12pt]{article}
 
@@ -84,7 +84,7 @@
 {\colorsection}
 
 \titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip}
-\newcommand{\colorsection}[1]{\colorbox{black}{\parbox{\dimexpr\textwidth-2\fboxsep}{\color{white} #1}}}
+\newcommand{\colorsection}[1]{\colorbox{gray45}{\parbox{\dimexpr\textwidth-2\fboxsep}{\color{white} #1}}}
 
 \titleformat{name=\subsection}[block]
 {\normalfont\large\bfseries}
@@ -92,7 +92,7 @@
 {1em}
 {}[{\titlerule[0.8pt]}]
 
-\lhead{{\color{gray}{\footnotesize ISAT \\Nota Metodol\'ogica}}}
+\lhead{{\color{gray}{\footnotesize Manuel Sarmiento Navarro}}}
 \rfoot{\thepage}
 
 \renewcommand{\headrulewidth}{0pt}

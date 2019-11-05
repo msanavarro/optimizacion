@@ -1,32 +1,3 @@
-\documentclass{itam}
-\usepackage{mystyle}
-\usepackage{Sweave}
-\begin{document}
-\input{documento-concordance}
-
-\title{Optimizació Numérica}
-\author{Manuel Sarmiento Navarro}
-\maketitle
-
-% \section{Introducción}
-% \SweaveInput{tex/intro.Rnw}
-
-% \section{Laboratorio 1}
-% \SweaveInput{tex/lab1.Rnw}
-% 
-% \section{Laboratorio 2}
-% \SweaveInput{tex/lab2.Rnw}
-% 
-% \section{Laboratorio 3}
-% \SweaveInput{tex/lab3.Rnw}
-% 
-% \section{Laboratorio 4}
-% \SweaveInput{tex/lab4.Rnw}
-% 
-% \section{Laboratorio 5}
-% \SweaveInput{tex/lab5.Rnw}
-
-\section{Tarea 1}
 \begin{enumerate}
 
 \item Sea $C$ un cono convexo cerrado. Si $S \subset C$, entonces $S^{**} \subset C$.
@@ -75,5 +46,3 @@ Sean $p, q \in P = \{p \in \mathbb{R}^n | \alpha\leq cuartil(f(x))\leq\beta\}$, 
 \item Demuestre que el conjugado de $f(X)=traza(X^{-1})$ en $dom(f)=\mathrm{S}_{++}^n$ está dado por $f^*(Y)=-2traza(-Y)^{-\frac{1}{2}}$ con $dom(f^*)=-\mathrm{S}_{+}^n$
 
 \end{enumerate}
-
-\end{document}

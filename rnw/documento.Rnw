@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{itam}
 \usepackage{mystyle}
 \begin{document}
 \SweaveOpts{concordance=TRUE}
@@ -13,13 +13,19 @@
 % \section{Laboratorio 1}
 % \SweaveInput{tex/lab1.Rnw}
 % 
-\section{Laboratorio 2}
-\SweaveInput{tex/lab2.Rnw}
+% \section{Laboratorio 2}
+% \SweaveInput{tex/lab2.Rnw}
+% 
+% \section{Laboratorio 3}
+% \SweaveInput{tex/lab3.Rnw}
+% 
+% \section{Laboratorio 4}
+% \SweaveInput{tex/lab4.Rnw}
+% 
+% \section{Laboratorio 5}
+% \SweaveInput{tex/lab5.Rnw}
 
-\section{Laboratorio 3}
-\SweaveInput{tex/lab3.Rnw}
-
-\section{Laboratorio 4}
-\SweaveInput{tex/lab4.Rnw}
+\section{Tarea 1}
+\SweaveInput{tex/tarea1.Rnw}
 
 \end{document}

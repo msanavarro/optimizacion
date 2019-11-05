@@ -1,32 +1,3 @@
-\documentclass{itam}
-\usepackage{mystyle}
-\usepackage{Sweave}
-\begin{document}
-\input{documento-concordance}
-
-\title{Optimizació Numérica}
-\author{Manuel Sarmiento Navarro}
-\maketitle
-
-% \section{Introducción}
-% \SweaveInput{tex/intro.Rnw}
-
-% \section{Laboratorio 1}
-% \SweaveInput{tex/lab1.Rnw}
-% 
-% \section{Laboratorio 2}
-% \SweaveInput{tex/lab2.Rnw}
-% 
-% \section{Laboratorio 3}
-% \SweaveInput{tex/lab3.Rnw}
-% 
-% \section{Laboratorio 4}
-% \SweaveInput{tex/lab4.Rnw}
-% 
-% \section{Laboratorio 5}
-% \SweaveInput{tex/lab5.Rnw}
-
-\section{Tarea 1}
 \begin{enumerate}
 
 \item Sea $C$ un cono convexo cerrado. Si $S \subset C$, entonces $S^{**} \subset C$.
@@ -44,20 +15,15 @@ De lo anterior ($a^Tz \geq 0$) y la definición de $S^{**}$ tenemos que $a \in S
 \end{itemize}
 
 \item La cubierta convexa de un conjunto $S$ es la intersección de todos los conjuntos convexos que contienen a $S$. \\
-\begin{defi}
-La \emph{cubierta convexa} de un conjunto $C$ es el conjunto de todas las combinaciones convexas de puntos en $C$.
+**Def**: La \emph{cubierta convexa} de un conjunto $C$ es el conjunto de todas las combinaciones convexas de puntos en $C$.
 $$
-conv(C) = \{\sum_{i=1}^{k}\theta_ix_i | x_i \in C, \theta_i \geq 0, \sum_{i=1}^{k}\theta_i=1\}
+conv
 $$
-\end{defi}
-Sea $x\in conv(C)$ y sea $K$ un conjunto convexo que contiene a $C$. Por la definición de cubierta convexa tenemos que $x$ es una combinación convexa de puntos de $C$ que están contenidos en $K$ que es convexo, por lo tanto $x\in K$.
 
 \item Sea $X$ una variable aleatoria en $\mathbb{R}$ con $P{X=a_i}=p_i$, $i \in [n]$ y $a_1<a_2<\ldots<a_n$. Si $p \in \mathbb{R}^n$, ¿cuál de las siguientes condiciones es convexa en $p$?
 \begin{enumerate}
-\item $\alpha \leq E[f(X)] \leq \beta$\\
-Sean $p, q \in P = \{p \in \mathbb{R}^n | \alpha\leq E[f(x)]\leq\beta\}$, ¿será que la combinación convexa de $p$ y $q$ está en $P$? Sí.
+\item $\alpha \leq E[f(X)] \leq \beta$
 \item $cuartil(X) \leq \alpha$
-Sean $p, q \in P = \{p \in \mathbb{R}^n | \alpha\leq cuartil(f(x))\leq\beta\}$, ¿será que la combinación convexa de $p$ y $q$ está en $P$? Sí.
 \end{enumerate}
 
 \item Sea $A \in \mathbb{R}^{m \times n}$, $b \in Im(A)$. Se cumple que $c^Tx=d$ para todo $x$ tal que $Ax = b$ ssi existe un vector $\lambda$ tal que  $c=A^T \lambda$ y $d=b^T \lambda$
@@ -75,5 +41,3 @@ Sean $p, q \in P = \{p \in \mathbb{R}^n | \alpha\leq cuartil(f(x))\leq\beta\}$, 
 \item Demuestre que el conjugado de $f(X)=traza(X^{-1})$ en $dom(f)=\mathrm{S}_{++}^n$ está dado por $f^*(Y)=-2traza(-Y)^{-\frac{1}{2}}$ con $dom(f^*)=-\mathrm{S}_{+}^n$
 
 \end{enumerate}
-
-\end{document}
